@@ -1,3 +1,63 @@
+/* 배경 스타일 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black url('./bg-wave.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* 컨테이너 정렬 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* 직무 리스트 */
+.job-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 1em;
+}
+
+.job-list h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* 이메일 스타일 */
+.email h3 {
+  color: #32CD32;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+/* 애니메이션 텍스트 */
+.animated-text {
+  display: flex;
+  gap: 20px;
+}
+
+.moving-text {
+  font-size: 7em;
+  font-weight: 900;
+  white-space: nowrap;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* ========== 반응형 설정 ========== */
 
 /* 모바일 (가로 600px 이하) */
@@ -53,3 +113,4 @@
     font-size: 7em;
   }
 }
+
