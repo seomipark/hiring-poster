@@ -1,57 +1,55 @@
-/* 배경 스타일 */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: black url('bg-wave.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  font-family: 'Arial', sans-serif;
+/* ========== 반응형 설정 ========== */
+
+/* 모바일 (가로 600px 이하) */
+@media (max-width: 600px) {
+  .job-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-list h2 {
+    font-size: 1em;
+  }
+
+  .email h3 {
+    font-size: 0.9em;
+  }
+
+  .animated-text {
+    flex-direction: column;
+  }
+
+  .moving-text {
+    font-size: 4em;
+  }
 }
 
-/* 컨테이너 정렬 */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
+/* 태블릿 (가로 601px ~ 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .job-list {
+    gap: 20px;
+  }
+
+  .job-list h2 {
+    font-size: 1.2em;
+  }
+
+  .email h3 {
+    font-size: 1em;
+  }
+
+  .moving-text {
+    font-size: 5em;
+  }
 }
 
-/* 직무 리스트 */
-.job-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 1em;
-}
+/* 데스크탑 (가로 1025px 이상) */
+@media (min-width: 1025px) {
+  .job-list {
+    gap: 30px;
+  }
 
-.job-list h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-/* 이메일 스타일 */
-.email h3 {
-  color: #32CD32;
-  font-size: 1em;
-  margin-bottom: 2em;
-}
-
-/* 애니메이션 텍스트 */
-.animated-text {
-  display: flex;
-  gap: 20px;
-}
-
-.moving-text {
-  font-size: 7em;
-  font-weight: 900;
-  white-space: nowrap;
-  position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  .moving-text {
+    font-size: 7em;
+  }
 }
